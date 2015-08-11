@@ -1,0 +1,23 @@
+<div class="reports">
+  <% if flash[:alert] %>
+      <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  
+  <%= form_tag  do %>
+	  <fieldset>
+	        <legend>Generate Report: </legend>
+
+			<div>
+	          <%= label_tag :FrAccount, 'From Account:' %>
+	          <%= select_tag :FrAccount , options_from_collection_for_select(Account.all, 'id','accountId'), prompt:'Select Account...' %>
+	        </div>
+	        <br />
+	        
+
+	        <div>
+	          <%= submit_tag "Generate Report" %>
+	        </div>	  
+	  </fieldset>  
+  <% end %>
+  
+</div>

@@ -1,0 +1,45 @@
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.customers{
+   h1 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    font:  150% sans-serif;
+    color: #226;
+    border-bottom: 3px dotted #77d;
+  }
+  
+   table {
+    border-collapse: collapse;
+   }
+   
+   
+   table tr th {
+    padding: 5px;
+    vertical-align: top;    
+    background:   #C25B56;
+    color: #FEF6EB
+  }  
+  
+  table tr td {
+    padding: 5px;
+    vertical-align: top;  
+  }
+  
+  .list_line_even {
+    background:   #FEF6EB;
+  }
+
+  .list_line_odd {
+    background:   #BEB9B5;
+  }
+  
+   .list_actions {
+    font-size:    x-small;
+    text-align:   right;
+    padding-left: 1em;
+  }
+  
+}

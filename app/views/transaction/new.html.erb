@@ -1,0 +1,42 @@
+<div class="transaction_form">
+  <% if flash[:alert] %>
+      <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  
+  <%= form_tag  transaction_create_path do %>
+      <fieldset>
+        <legend>Transaction for: </legend>
+        
+	        <div>
+	          <%= label_tag :FrAccount, 'From Account:' %>
+	          <%= select_tag :FrAccount , options_from_collection_for_select(Account.all, 'id','accountId'), prompt:'Select Payee...' %>
+	        </div>
+	        <br />
+	        <div>
+	          <%= label_tag :ToAccount, 'To Account:' %>
+	          <%= select_tag :ToAccount , options_from_collection_for_select(Account.all, 'id','accountId'), prompt:'Select Beneficiary...' %>
+	        </div>
+	        <br />
+	        <div>
+	          <%= label_tag :DrCr %>
+	          <%= select_tag :DrCr, options_for_select([ "Debit", "Credit"], "Debit") %>
+	        </div>
+	        <br />	        
+	   	    <div>
+	          <%= label_tag :Amount, 'Amount:' %>
+	          <%= text_field_tag :Amount%>
+	        </div>
+			<br />
+	   	    <div>
+	          <%= label_tag :Narration, 'Narration:' %>
+	          <%= text_field_tag :Narration %>
+	        </div>
+	        
+	        <br />
+	             
+	        <div>
+	          <%= submit_tag "Transaction" %>
+	        </div>
+      </fieldset>
+  <% end %>
+</div>

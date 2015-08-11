@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FromAccount: MyString
+  integer: MyString
+  ToAccount: 1
+  Amount: 1.5
+  DrCr: MyString
+  Narration: MyString
+
+two:
+  FromAccount: MyString
+  integer: MyString
+  ToAccount: 1
+  Amount: 1.5
+  DrCr: MyString
+  Narration: MyString
